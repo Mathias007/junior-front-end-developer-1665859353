@@ -8,22 +8,27 @@
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+}
+
 .App {
     text-align: center;
     background-color: #f4f5f7;
     display: flex;
     flex-direction: column;
+    padding: 1vh 5vh;
 }
 
 .nerd-header {
     max-width: 100%;
-    padding: 10px;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: calc(10px + 2vmin);
     cursor: pointer;
-    height: 10vh;
+    max-height: 10vh;
 }
 
 .nerd-header__logo {
@@ -55,7 +60,7 @@
     justify-content: space-between;
     text-align: center;
     flex-direction: column;
-    width: 25%;
+    width: 30%;
 }
 
 .nerd-app-area__header {
@@ -80,12 +85,14 @@
 .navigation__element .element {
 }
 
-.element__arrow {
-    background: #edf9f2;
-    border-radius: 2px;
+.element:hover {
 }
 
-.arrow {
+.element__arrow {
+    width: 18px;
+    height: 16px;
+    background: #edf9f2;
+    border-radius: 2px;
 }
 
 .element__text {
@@ -93,10 +100,20 @@
     font-size: 12px;
     line-height: 150%;
     font-weight: 500;
+    cursor: pointer;
 }
 
-.nerd-app-area_section main {
-    width: 75%;
+.element__text--locked {
+    color: #aeb5c1;
+    font-weight: 500;
+}
+
+.element__text--active {
+    font-weight: 600;
+}
+
+.nerd-app-area__section .main {
+    width: 70%;
 }
 
 .main__header {
@@ -130,6 +147,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
 }
 
 .message-box__meta {
@@ -228,20 +246,18 @@
     color: #6b778c;
 }
 
-
 .nerd-footer {
     margin: 10px;
     display: flex;
     justify-content: space-between;
-
 }
-.nerd-footer__section {}
+.nerd-footer__section {
+}
 .nerd-footer__element {
     font-size: 8px;
     line-height: 150%;
 }
 
-
-.App-link {
-    color: #61dafb;
+.nerd-footer__element:hover {
+    filter: brightness(120%);
 }

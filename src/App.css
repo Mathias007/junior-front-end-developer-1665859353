@@ -1,38 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+    scroll-behavior: smooth;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    background-color: #f4f5f7;
+    display: flex;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nerd-header {
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(10px + 2vmin);
+    cursor: pointer;
+    height: 10vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nerd-header__logo {
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nerd-header__avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    cursor: pointer;
 }
+
+.nerd-app-area {
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+    min-height: 85vh;
+}
+
+.nerd-app-area__section {
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.nerd-app-area__section .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+    width: 25%;
+}
+
+.nerd-app-area__header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f4f5f7;
+    text-align: left;
+    line-height: 158%;
+    font-size: 12px;
+}
+
+.navigation__area {
+    padding: 24px;
+}
+
+.navigation__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: start;
+}
+
+.navigation__element .element {
+}
+
+.element__arrow {
+    background: #edf9f2;
+    border-radius: 2px;
+}
+
+.arrow {
+}
+
+.element__text {
+    margin: 12px;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 500;
+}
+
+.nerd-app-area_section main {
+    width: 75%;
+}
+
+.main__header {
+}
+
+.main__content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 90%;
+    padding: 0 4px;
+}
+.main__messages-list {
+    width: 35%;
+    height: 100%;
+    border-bottom-left-radius: 12px;
+}
+
+.messages-list {
+    background-color: #f4f5f7;
+}
+
+.messages-list__message-box {
+}
+
+.message-box {
+    margin: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.message-box__meta {
+    display: flex;
+    padding: 10px;
+}
+
+.meta__element {
+    margin: 0 5px;
+    font-size: 10px;
+    line-height: 140%;
+    font-weight: 500;
+    color: #6b778c;
+}
+
+/* .meta__author {
+}
+.meta__separator {
+}
+.meta__date {
+} */
+
+.message-box__title {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 150%;
+    color: #0165ff;
+    text-align: left;
+}
+
+.message-box__short-content {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 140%;
+    color: #6b778c;
+    text-align: justify;
+}
+
+.main__message-content {
+    width: 65%;
+}
+
+.message-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 11px 33px;
+    align-items: flex-start;
+}
+
+.message-content__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.message-content__title {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 157%;
+    color: #242325;
+    text-align: left;
+}
+
+.message-content__avatar {
+    width: 48px;
+    height: 48px;
+    padding: 2px;
+
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.content__data {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-content__meta {
+    text-align: left;
+}
+
+.message-content__meta .meta__element:nth-child(1) {
+    padding-left: 6px;
+    font-size: 16px;
+    line-height: 156%;
+    color: #242325;
+}
+
+.message-content__text {
+    padding: 12px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 200%;
+    text-align: left;
+    color: #6b778c;
+}
+
+
+.nerd-footer {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.nerd-footer__section {}
+.nerd-footer__element {
+    font-size: 8px;
+    line-height: 150%;
+}
+
 
 .App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    color: #61dafb;
 }

@@ -2,7 +2,9 @@ import React from "react";
 
 import avatar from "../../assets/default_avatar.png";
 
-export default function Message({context}) {
+import { DOT } from "../../config/names";
+
+export default function Message({ context }) {
     const { title, content, author, created_at } = context;
 
     const date = new Date(created_at).toLocaleDateString();
@@ -21,13 +23,11 @@ export default function Message({context}) {
                     <div className="message-content__meta">
                         <span className="meta__element">{author}</span>
                         <span className="meta__element meta__element--separator">
-                            {" "}
-                            ·{" "}
+                            {DOT}
                         </span>
                         <span className="meta__element">{date}</span>
                         <span className="meta__element meta__element--separator">
-                            {" "}
-                            ·{" "}
+                            {DOT}
                         </span>
                         <span className="meta__element">{hour}</span>
                     </div>

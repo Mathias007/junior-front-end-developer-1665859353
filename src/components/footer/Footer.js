@@ -2,20 +2,24 @@ import React from "react";
 
 import FooterElement from "./FooterElement";
 
+import { FOOTER } from "../../config/names";
+
+const { TERMS, POLICY, COPYRIGHT, VERSION, UPDATE } = FOOTER;
+
 export default function Footer() {
     return (
         <footer className="nerd-footer">
             <section className="nerd-footer__section">
-                <FooterElement content={"Terms of service"} path="#" />
+                <FooterElement content={TERMS} path="#" />
                 <FooterElement isSeparator />
-                <FooterElement content={"Privacy policy"} path="#" />
+                <FooterElement content={POLICY} path="#" />
                 <FooterElement isSeparator />
-                <FooterElement content={"Copyright"} path="#" />
+                <FooterElement content={COPYRIGHT} path="#" />
             </section>
             <section className="nerd-footer__section">
-                <FooterElement content={"nerd.family Version 1.2"} path="#" />
+                <FooterElement content={VERSION} path="#" />
                 <FooterElement isSeparator />
-                <FooterElement content={"Last update 10/09/2022"} path="#" />
+                <FooterElement content={UPDATE} path="#" />
             </section>
         </footer>
     );

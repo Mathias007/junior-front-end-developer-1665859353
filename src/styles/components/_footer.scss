@@ -1,0 +1,18 @@
+.nerd-footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 10px;
+
+    // &__section {
+    // }
+
+    &__element {
+        font-size: 8px;
+        line-height: 150%;
+
+        &:hover {
+            filter: brightness(120%);
+        }
+    }
+}

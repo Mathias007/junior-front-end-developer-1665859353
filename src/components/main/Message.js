@@ -1,6 +1,6 @@
 import React from "react";
 
-import avatar from "../assets/default_avatar.png";
+import avatar from "../../assets/default_avatar.png";
 
 export default function Message({context}) {
     const { title, content, author, created_at } = context;

@@ -1,7 +1,7 @@
 import React from "react";
 
-import logo from "../assets/logo.svg";
-import avatar from "../assets/default_avatar.png";
+import logo from "../../assets/logo.svg";
+import avatar from "../../assets/default_avatar.png";
 
 export default function Header() {
     return (

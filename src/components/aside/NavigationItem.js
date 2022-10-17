@@ -1,8 +1,8 @@
 import React from "react";
 
-import active from "../assets/statuses/active.svg";
-import checked from "../assets/statuses/checked.svg";
-import locked from "../assets/statuses/locked.svg";
+import active from "../../assets/statuses/active.svg";
+import checked from "../../assets/statuses/checked.svg";
+import locked from "../../assets/statuses/locked.svg";
 
 export default function NavigationItem({ title, status, onClick }) {
     return (

@@ -1,14 +1,25 @@
 import React from "react";
+
 import NavigationItem from "./NavigationItem";
 
-export default function TaskNavigation() {
+export default function TaskNavigation(props) {
+    const { data, onClick } = props;
+
     return (
         <nav className="navigation__area">
             <ul className="navigation__list">
-                <NavigationItem />
-                <NavigationItem />
-                <NavigationItem />
-                <NavigationItem />
+                {data.map((item) => {
+                    const { id, description, status } = item;
+
+                    return (
+                        <NavigationItem
+                            key={id}
+                            description={description}
+                            status={status}
+                            onClick={() => onClick(id)}
+                        />
+                    );
+                })}
             </ul>
         </nav>
     );

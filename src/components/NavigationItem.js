@@ -1,15 +1,37 @@
 import React from "react";
 
-import arrow from "../assets/arrow.svg";
+import active from "../assets/statuses/active.svg";
+import checked from "../assets/statuses/checked.svg";
+import locked from "../assets/statuses/locked.svg";
 
-export default function NavigationItem() {
+export default function NavigationItem(props) {
+    const { description, status, onClick } = props;
+
     return (
-        <li className="navigation__element element">
-            <p className="element__text">
+        <li className="navigation__element element" onClick={onClick}>
+            <p
+                className={`element__text ${
+                    status === "locked"
+                        ? "element__text--locked"
+                        : status === "active"
+                        ? "element__text--active"
+                        : ""
+                }`}
+            >
                 <span className="element__arrow">
-                    <img src={arrow} className="arrow" alt="arrow" />
+                    <img
+                        src={
+                            status === "checked"
+                                ? checked
+                                : status === "active"
+                                ? active
+                                : locked
+                        }
+                        className="arrow"
+                        alt="task-status"
+                    />
                 </span>{" "}
-                Application Setup
+                {description}
             </p>
         </li>
     );

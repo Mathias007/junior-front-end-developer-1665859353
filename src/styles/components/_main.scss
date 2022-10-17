@@ -1,0 +1,35 @@
+.main {
+    &__header {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 158%;
+        letter-spacing: -0.01em;
+        color: $text-second-color;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 16px;
+        border: 2px solid $text-second-color;
+        border-radius: 50%;
+    }
+
+    &__content-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        
+        height: 90%;
+        padding: 0 4px;
+    }
+
+    &__messages-list {
+        width: 35%;
+        height: 100%;
+        border-bottom-left-radius: 12px;
+
+        background-color: $background-first-color;
+    }
+}

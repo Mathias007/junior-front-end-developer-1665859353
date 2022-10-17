@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import MessagesList from "./MessagesList";
 import Message from "./Message";
 
-import compass from "../assets/compass.svg";
+import compass from "../../assets/compass.svg";
 
 export default function MainSection({ task }) {
     const [selectedContext, setSelectedContext] = useState([]);

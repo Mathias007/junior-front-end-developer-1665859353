@@ -1,0 +1,42 @@
+.navigation__area {
+    padding: 24px;
+}
+
+.navigation__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: start;
+}
+
+// .navigation__element .element {
+// }
+
+// .element:hover {
+// }
+
+.element__arrow {
+    width: 18px;
+    height: 16px;
+    border-radius: 2px;
+
+    background: $background-third-color;
+}
+
+.element__text {
+    margin: 12px;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 500;
+    cursor: pointer;
+
+    &--locked {
+        color: $special-color;
+        font-weight: 500;
+        cursor: default;
+    }
+
+    &--active {
+        font-weight: 600;
+    }
+}

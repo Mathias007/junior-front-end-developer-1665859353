@@ -1,38 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+    background-color: #f4f5f7;
+    display: flex;
+    flex-direction: column;
+    padding: 1vh 5vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nerd-header {
+    max-width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: calc(10px + 2vmin);
+    cursor: pointer;
+    max-height: 10vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nerd-header__logo {
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nerd-header__avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.nerd-app-area {
+    display: flex;
+    margin: 10px;
+    justify-content: space-around;
+    min-height: 85vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nerd-app-area__section {
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.nerd-app-area__section .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+    width: 30%;
+    margin-right: 12px;
+}
+
+.nerd-app-area__header {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f4f5f7;
+    text-align: left;
+    line-height: 158%;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.navigation__area {
+    padding: 24px;
+}
+
+.navigation__list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    text-align: start;
+}
+
+.navigation__element .element {
+}
+
+.element:hover {
+}
+
+.element__arrow {
+    width: 18px;
+    height: 16px;
+    background: #edf9f2;
+    border-radius: 2px;
+}
+
+.element__text {
+    margin: 12px;
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.element__text--locked {
+    color: #aeb5c1;
+    font-weight: 500;
+    cursor: default;
+}
+
+.element__text--active {
+    font-weight: 600;
+}
+
+.nerd-app-area__section .main {
+    width: 70%;
+}
+
+.main__header {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 158%;
+    letter-spacing: -0.01em;
+    color: #0165ff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.main__icon {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #0165ff;
+    border-radius: 50%;
+}
+
+.main__content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 90%;
+    padding: 0 4px;
+}
+.main__messages-list {
+    width: 35%;
+    height: 100%;
+    border-bottom-left-radius: 12px;
+}
+
+.messages-list {
+    background-color: #f4f5f7;
+}
+
+.messages-list__message-box {
+}
+
+.message-box {
+    margin: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.message-box__meta {
+    display: flex;
+    padding: 10px;
+}
+
+.meta__element {
+    margin: 0 5px;
+    font-size: 10px;
+    line-height: 140%;
+    font-weight: 500;
+    color: #6b778c;
+}
+
+.meta__element--new {
+    padding: 3px 3px 7px 3px;
+    width: 40px;
+    height: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #eaf2fe;
+    background-color: #0165ff;
+}
+
+.message-box__title {
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 500;
+    color: #242325;
+}
+
+.message-box__title--new {
+    font-weight: 700;
+    color: #0165ff;
+}
+
+.message-box__short-content {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 140%;
+    color: #6b778c;
+    text-align: justify;
+}
+
+.main__message-content {
+    width: 65%;
+}
+
+.message-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 11px 33px;
+    align-items: flex-start;
+}
+
+.message-content__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.message-content__title {
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 157%;
+    color: #242325;
+    text-align: left;
+}
+
+.message-content__avatar {
+    width: 48px;
+    height: 48px;
+    padding: 2px;
+
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.content__data {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-content__meta {
+    text-align: left;
+}
+
+.message-content__meta .meta__element:nth-child(1) {
+    padding-left: 6px;
+    font-size: 16px;
+    line-height: 156%;
+    color: #242325;
+}
+
+.message-content__text {
+    padding: 12px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 200%;
+    text-align: left;
+    color: #6b778c;
+}
+
+.nerd-footer {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.nerd-footer__section {
+}
+.nerd-footer__element {
+    font-size: 8px;
+    line-height: 150%;
+}
+
+.nerd-footer__element:hover {
+    filter: brightness(120%);
 }

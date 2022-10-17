@@ -27,9 +27,15 @@ export default function App() {
     }, [tasksData, dataLoaded]);
 
     const selectTask = (id) => {
+        tasksData.forEach((element) => {
+            if (element.status === "active") element.status = "checked";
+            if (element.id === id && element.status !== "locked")
+                element.status = "active";
+        });
+
         const task = tasksData.find((element) => element.id === id);
 
-        setSelectedTask(task);
+        if (task.status !== "locked") setSelectedTask(task);
     };
 
     return dataLoaded ? (

@@ -1,9 +1,7 @@
 import React from "react";
 import MessageBox from "./MessageBox";
 
-export default function MessagesList(props) {
-    const { task, onClick } = props;
-
+export default function MessagesList({ task, onClick }) {
     return (
         <section className="main__messages-list messages-list">
             {task

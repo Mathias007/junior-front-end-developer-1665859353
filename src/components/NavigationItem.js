@@ -4,9 +4,7 @@ import active from "../assets/statuses/active.svg";
 import checked from "../assets/statuses/checked.svg";
 import locked from "../assets/statuses/locked.svg";
 
-export default function NavigationItem(props) {
-    const { description, status, onClick } = props;
-
+export default function NavigationItem({ title, status, onClick }) {
     return (
         <li className="navigation__element element" onClick={onClick}>
             <p
@@ -31,7 +29,7 @@ export default function NavigationItem(props) {
                         alt="task-status"
                     />
                 </span>{" "}
-                {description}
+                {title}
             </p>
         </li>
     );

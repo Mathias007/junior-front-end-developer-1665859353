@@ -61,6 +61,7 @@ a {
     text-align: center;
     flex-direction: column;
     width: 30%;
+    margin-right: 12px;
 }
 
 .nerd-app-area__header {
@@ -69,6 +70,7 @@ a {
     text-align: left;
     line-height: 158%;
     font-size: 12px;
+    text-transform: uppercase;
 }
 
 .navigation__area {
@@ -106,6 +108,7 @@ a {
 .element__text--locked {
     color: #aeb5c1;
     font-weight: 500;
+    cursor: default;
 }
 
 .element__text--active {
@@ -117,6 +120,20 @@ a {
 }
 
 .main__header {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 158%;
+    letter-spacing: -0.01em;
+    color: #0165ff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.main__icon {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #0165ff;
+    border-radius: 50%;
 }
 
 .main__content-wrapper {
@@ -163,19 +180,29 @@ a {
     color: #6b778c;
 }
 
-/* .meta__author {
+.meta__element--new {
+    padding: 3px 3px 7px 3px;
+    width: 40px;
+    height: 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #eaf2fe;
+    background-color: #0165ff;
 }
-.meta__separator {
-}
-.meta__date {
-} */
 
 .message-box__title {
-    font-weight: 700;
     font-size: 12px;
     line-height: 150%;
+    font-weight: 500;
+    color: #242325;
+}
+
+.message-box__title--new {
+    font-weight: 700;
     color: #0165ff;
-    text-align: left;
 }
 
 .message-box__short-content {

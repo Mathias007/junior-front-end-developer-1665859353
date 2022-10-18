@@ -10,7 +10,7 @@ import { HEADERS } from "../../config/names";
 const { CONTEXT } = HEADERS;
 
 export default function MainSection({ task }) {
-    const [selectedContext, setSelectedContext] = useState([]);
+    const [selectedContext, setSelectedContext] = useState(task[0]);
 
     const selectContext = (id) => {
         if (!task[id].read) task[id].read = !task[id].read;

@@ -4,11 +4,14 @@ import avatar from "../../assets/default_avatar.png";
 
 import { DOT } from "../../config/names";
 
+import {
+    getDaysAgo,
+    showHourOfThePost,
+    showShortDateOfThePost,
+} from "./helpers/dateMethods";
+
 export default function Message({ context }) {
     const { title, content, author, created_at } = context;
-
-    const date = new Date(created_at).toLocaleDateString();
-    const hour = new Date(created_at).toLocaleTimeString();
 
     return (
         <article className="main__message-content message-content">
@@ -25,11 +28,16 @@ export default function Message({ context }) {
                         <span className="meta__element meta__element--separator">
                             {DOT}
                         </span>
-                        <span className="meta__element">{date}</span>
+                        <span className="meta__element">
+                            {getDaysAgo(created_at)},{" "}
+                            {showShortDateOfThePost(created_at)}
+                        </span>
                         <span className="meta__element meta__element--separator">
                             {DOT}
                         </span>
-                        <span className="meta__element">{hour}</span>
+                        <span className="meta__element">
+                            {showHourOfThePost(created_at)}
+                        </span>
                     </div>
                     <div className="message-content__text">{content}</div>
                 </div>

@@ -2,10 +2,10 @@ import React from "react";
 
 import { NEW, DOT, MORE } from "../../config/names";
 
+import { showLongDateOfThePost } from "./helpers/dateMethods";
+
 export default function MessageBox({ contextData, onClick }) {
     const { title, content, author, created_at, read } = contextData;
-
-    const date = new Date(created_at).toLocaleDateString();
 
     return (
         <article
@@ -22,7 +22,9 @@ export default function MessageBox({ contextData, onClick }) {
                 <span className="meta__element meta__element--separator">
                     {DOT}
                 </span>
-                <span className="meta__element">{date}</span>
+                <span className="meta__element">
+                    {showLongDateOfThePost(created_at)}
+                </span>
             </div>
             <h3
                 className={`message-box__title ${

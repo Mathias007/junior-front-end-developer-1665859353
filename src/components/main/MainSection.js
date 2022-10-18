@@ -5,8 +5,12 @@ import Message from "./Message";
 
 import compass from "../../assets/compass.svg";
 
+import { HEADERS } from "../../config/names";
+
+const { CONTEXT } = HEADERS;
+
 export default function MainSection({ task }) {
-    const [selectedContext, setSelectedContext] = useState([]);
+    const [selectedContext, setSelectedContext] = useState(task[0]);
 
     const selectContext = (id) => {
         if (!task[id].read) task[id].read = !task[id].read;
@@ -20,7 +24,8 @@ export default function MainSection({ task }) {
         <main className="nerd-app-area__section main">
             <h2 className="nerd-app-area__header main__header">
                 <img src={compass} className="main__icon" alt="icon" />
-                {"           "}Business Context
+                {"           "}
+                {CONTEXT}
             </h2>
             <div className="main__content-wrapper">
                 <MessagesList task={task} onClick={selectContext} />

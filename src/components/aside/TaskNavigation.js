@@ -12,6 +12,7 @@ export default function TaskNavigation({ data, onClick }) {
                     return (
                         <NavigationItem
                             key={id}
+                            id={id}
                             title={title}
                             status={status}
                             onClick={() => onClick(id)}
